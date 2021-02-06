@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="9dp"
+    tools:context=".QuizUiProgram">
+
+
+    <TextView
+        android:id="@+id/stopwatch"
+        android:gravity="center"
+        android:layout_width="130dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="16dp"
+        android:text="00:00"
+        android:textSize="25dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_marginTop="50dp"
+        android:orientation="horizontal"
+        android:id="@+id/question_container"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+        <TextView
+            android:id="@+id/question_no_displayer"
+            android:layout_width="58dp"
+            android:layout_height="40dp"
+            android:textSize="17dp"
+            android:text="My name is "
+            android:textStyle="bold" />
+        <TextView
+            android:layout_marginLeft="15dp"
+            android:id="@+id/question_tag"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:autoSizePresetSizes="@array/auto_sizes"
+            android:fontFamily="@font/hammersmith_one"
+            android:textStyle="italic"
+            android:text="Who is the CEO of Birkshire Hathway ?"
+            app:autoSizeTextType="uniform"
+            />
+
+
+    </LinearLayout>
+
+        <RadioGroup
+            android:id="@+id/the_group"
+            app:layout_constraintTop_toBottomOf="@id/question_container"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="16dp">
+
+            <RadioButton
+                android:id="@+id/option_one"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:background="#ECECEC"
+                android:buttonTint="@color/black"
+                android:text="Me"
+                android:fontFamily="@font/didact_gothic"
+                android:textSize="18sp" />
+
+            <RadioButton
+                android:id="@+id/option_two"
+                android:buttonTint="@color/black"
+                android:layout_width="match_parent"
+                android:background="#ECECEC"
+                android:layout_height="wrap_content"
+                android:text="aditya_thakur"
+                android:fontFamily="@font/didact_gothic"
+                android:textSize="18sp"
+                android:layout_margin="12dp"/>
+
+            <RadioButton
+                android:id="@+id/option_three"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:background="#ECECEC"
+                android:buttonTint="@color/black"
+                android:fontFamily="@font/didact_gothic"
+                android:text="chinmay_annadate"
+                android:textSize="18sp" />
+            <RadioButton
+                android:id="@+id/option_four"
+                android:buttonTint="@color/black"
+                android:background="#ECECEC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="tanay_yeolekar"
+                android:textSize="18sp"
+                android:fontFamily="@font/didact_gothic"
+                android:layout_margin="12dp"/>
+        </RadioGroup>
+
+
+        <LinearLayout
+            android:layout_marginTop="23dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/the_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:max="10"
+                android:progress="5"
+                android:minHeight="50dp"
+                android:progressTint="#659FFF"
+                android:indeterminate="false"
+                style="?android:attr/progressBarStyleHorizontal"/>
+
+            <TextView
+                android:id="@+id/progressView"
+                android:layout_width="80dp"
+                android:layout_margin="4dp"
+                android:layout_height="30dp"
+                android:text="80%"
+                android:textSize="19sp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                />
+
+
+        </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
